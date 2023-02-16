@@ -19,7 +19,6 @@ class DrawingPlots:
     def draw_plots(self):
         df = pd.read_json(self.url)
         df.to_json('example.json')
-        '''df_f = pd.read_json('example.json')'''
         df.plot(x="min", y=["max", "name"], kind="bar", figsize=(9, 8))
         script_dir = os.path.dirname(__file__)
         results_dir = os.path.join(script_dir, 'plots/')
